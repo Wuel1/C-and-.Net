@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C#\\Praticando\\estacionamento\\estacionamento.csproj": {}
+    "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\estacionamento\\estacionamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C#\\Praticando\\estacionamento\\estacionamento.csproj": {
+    "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\estacionamento\\estacionamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C#\\Praticando\\estacionamento\\estacionamento.csproj",
+        "projectUniqueName": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\estacionamento\\estacionamento.csproj",
         "projectName": "estacionamento",
-        "projectPath": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C#\\Praticando\\estacionamento\\estacionamento.csproj",
+        "projectPath": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\estacionamento\\estacionamento.csproj",
         "packagesPath": "C:\\Users\\wands\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C#\\Praticando\\estacionamento\\obj\\",
+        "outputPath": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\estacionamento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wands\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

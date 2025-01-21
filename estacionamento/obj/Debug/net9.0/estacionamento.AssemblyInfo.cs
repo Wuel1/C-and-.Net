@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("estacionamento")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3a0184eab60d43964346604a8c7fcf64a7a09c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("estacionamento")]
 [assembly: System.Reflection.AssemblyTitleAttribute("estacionamento")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

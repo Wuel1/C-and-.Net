@@ -7,42 +7,42 @@ namespace estacionamento.models
 {
     public class Estacionamento
     {
-        public decimal FirstPrice { get; set; }
-        public decimal HoursPrice { get; set; }
-        public List<string> cars = new List<string>();
+        private decimal FirstPrice { get; set; }
+        private decimal HoursPrice { get; set; }
+        private List<Veiculo> vehicles = new List<Veiculo>();
 
         public Estacionamento(decimal firstPrice, decimal hoursPrice){
             FirstPrice = firstPrice;
             HoursPrice = hoursPrice;
         }
 
-        public void AddCar(string carName, string mark){
+        public void AddCar(Veiculo vehicle){
             Console.Clear();
-            cars.Add(carName);
-            Console.WriteLine($"O Carro de placa {carName} da marca {mark} foi adicionado ao estacionamento");
+            vehicles.Add(vehicle);
+            Console.WriteLine($"O Carro de placa {vehicle.Name} da marca {vehicle.Mark} foi adicionado ao estacionamento");
             Enter();
         }
 
-        public void RemoveCar(string carName){
+        public void RemoveCar(string name){
             Console.Clear();
-            if(cars.Contains(carName))
-            {
-                cars.Remove(carName);
-                Console.WriteLine($"Quantas horas o veículo de placa {carName} ficou no estacionamento?");
-                _ = int.TryParse(Console.ReadLine(), out int hours);
-                decimal value = FirstPrice + (hours * HoursPrice);
-                Console.WriteLine($"O valor do estacionamento ficou: {value}");
-            }else{
-                Console.WriteLine($"O Carro de placa {carName} não foi encontrado");
+            for(int i = 0; i < vehicles.Count(); i++){
+                if(vehicles[i].Name == name){
+                    int hours = GetValidInt($"Quantas horas o veículo de placa {vehicles[i].Name} ficou no estacionamento?");
+                    decimal value = FirstPrice + (hours * HoursPrice);
+                    Console.WriteLine($"O valor do estacionamento ficou: {value:F2}");
+                    vehicles.RemoveAt(i);
+                    return;
+                }
             }
+            Console.WriteLine($"O veículo de placa {name} não foi encontrado");
             Enter();
         }
 
         public void ListCar(){
             Console.Clear();
             Console.WriteLine("Lista de Carros");
-            foreach(string car in cars){
-                Console.WriteLine($" - {car}");
+            foreach(Veiculo car in vehicles){
+                Console.WriteLine($" => {car.Name} - {car.Mark}"); 
             }
             Enter();
         }
@@ -51,5 +51,16 @@ namespace estacionamento.models
             Console.WriteLine("Aperte Enter para continuar");
             Console.ReadLine();
         }
+
+        private static int GetValidInt(string message){
+            Console.WriteLine(message);
+            while (true){
+                if (int.TryParse(Console.ReadLine(), out int value))
+                {
+                    return value;
+                }
+                Console.WriteLine("Valor inválido, tente novamente");
+            }
+        }
     }
-} 
+}

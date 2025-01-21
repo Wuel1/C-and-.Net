@@ -17,8 +17,6 @@ class Program{
 
         hoursPrice = Convert.ToDecimal(Console.ReadLine());
 
-        Console.ReadLine();
-
         // Iniciando uma instância de um estacionamento
         Estacionamento parking = new Estacionamento(firstPrice, hoursPrice);
 
@@ -48,8 +46,8 @@ class Program{
                     Console.ReadKey();
                     continue;
                 }
-
-                parking.AddCar(name, mark);
+                Veiculo vehicle =  new Veiculo(name, mark);
+                parking.AddCar(vehicle);
                 continue;
             }
             
