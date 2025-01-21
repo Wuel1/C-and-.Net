@@ -1,0 +1,14 @@
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\bin\Debug\net9.0\estacionamento.exe
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\bin\Debug\net9.0\estacionamento.deps.json
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\bin\Debug\net9.0\estacionamento.runtimeconfig.json
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\bin\Debug\net9.0\estacionamento.dll
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\bin\Debug\net9.0\estacionamento.pdb
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.AssemblyInfoInputs.cache
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.AssemblyInfo.cs
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.csproj.CoreCompileInputs.cache
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.dll
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\refint\estacionamento.dll
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.pdb
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\estacionamento.genruntimeconfig.cache
+C:\Users\wands\OneDrive\Área de Trabalho\Projetos\Dio.me\C#\Praticando\estacionamento\obj\Debug\net9.0\ref\estacionamento.dll
