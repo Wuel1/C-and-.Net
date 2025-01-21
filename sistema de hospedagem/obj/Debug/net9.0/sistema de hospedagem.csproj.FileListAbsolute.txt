@@ -1,0 +1,15 @@
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\bin\Debug\net9.0\sistema de hospedagem.exe
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\bin\Debug\net9.0\sistema de hospedagem.deps.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\bin\Debug\net9.0\sistema de hospedagem.runtimeconfig.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\bin\Debug\net9.0\sistema de hospedagem.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\bin\Debug\net9.0\sistema de hospedagem.pdb
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.AssemblyInfoInputs.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.AssemblyInfo.cs
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.csproj.CoreCompileInputs.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.sourcelink.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\refint\sistema de hospedagem.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.pdb
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\sistema de hospedagem.genruntimeconfig.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\sistema de hospedagem\obj\Debug\net9.0\ref\sistema de hospedagem.dll
