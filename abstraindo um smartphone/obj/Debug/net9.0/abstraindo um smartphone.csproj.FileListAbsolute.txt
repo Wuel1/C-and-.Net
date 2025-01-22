@@ -1,0 +1,15 @@
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\bin\Debug\net9.0\abstraindo um smartphone.exe
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\bin\Debug\net9.0\abstraindo um smartphone.deps.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\bin\Debug\net9.0\abstraindo um smartphone.runtimeconfig.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\bin\Debug\net9.0\abstraindo um smartphone.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\bin\Debug\net9.0\abstraindo um smartphone.pdb
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.AssemblyInfoInputs.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.AssemblyInfo.cs
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.csproj.CoreCompileInputs.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.sourcelink.json
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\refint\abstraindo um smartphone.dll
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.pdb
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\abstraindo um smartphone.genruntimeconfig.cache
+C:\Users\wands\Desktop\Projetos\C#\C-and-.Net\abstraindo um smartphone\obj\Debug\net9.0\ref\abstraindo um smartphone.dll

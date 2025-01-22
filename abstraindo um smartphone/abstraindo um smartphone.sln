@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "abstraindo um smartphone", "abstraindo um smartphone.csproj", "{AF4D3D06-5F4F-AD8A-BC55-37E264DC357C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF4D3D06-5F4F-AD8A-BC55-37E264DC357C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4D3D06-5F4F-AD8A-BC55-37E264DC357C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4D3D06-5F4F-AD8A-BC55-37E264DC357C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4D3D06-5F4F-AD8A-BC55-37E264DC357C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFDC19D-6328-429B-A288-755C28125F26}
+	EndGlobalSection
+EndGlobal
