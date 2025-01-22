@@ -2,14 +2,19 @@
 
 class Program(){
     public static void Main(String[] args) {
+        List<Suite> suites = new List<Suite>();
+        List<Pessoa> listaHospedes = new List<Pessoa>();
+        List<Reserva> listaReservas = new List<Reserva>();
+
         while(true)
         {
             int menu;
+            Console.Clear();
             Console.WriteLine("Bem vindo ao sistema de hotelaria Wuel");
             Console.WriteLine("Por favor, Selecione uma das opções abaixo");
             Console.WriteLine("1 - Cadastrar Pessoa");
             Console.WriteLine("2 - Cadastrar Suite");
-            Console.WriteLine("3 - Listar Suite");
+            Console.WriteLine("3 - Listar Suites");
             Console.WriteLine("4 - Fazer Reserva");
             Console.WriteLine("5 - Verificar Reservas");
 
@@ -19,7 +24,6 @@ class Program(){
             {
                 Console.Clear();
                 int numeroHospedes;
-                List<Pessoa> listaHospedes = new List<Pessoa>();
 
                 Console.WriteLine("Quantas Pessoas você deseja cadastrar?");
 
@@ -47,7 +51,7 @@ class Program(){
                 int capacidade;
                 int valorDiaria;
 
-                Console.WriteLine("Digite qual tipo de suíte\n1 - Premium\n 2 - Casual");
+                Console.WriteLine("Digite qual tipo de suíte\n1 - Premium\n2 - Casual");
                 int chave = GetValidInt();
                 tipo = (chave == 1)? "Premium" : "Casual";
                 Console.WriteLine("Digite a capacidade da suíte");
@@ -56,8 +60,44 @@ class Program(){
                 valorDiaria = GetValidInt();
 
                 Suite suite = new Suite(tipo, capacidade, valorDiaria);
+                suites.Add(suite);
 
-                Console.WriteLine($"Suite do tipo {suite.TipoSuite} com capacidade de {suite.Capacidade} hospedes e com valor\nde       diária de R$({suite.ValorDiaria}:F2) criada com sucesso");
+                Console.WriteLine($"Suite do tipo {suite.TipoSuite} com capacidade de {suite.Capacidade} hospedes e com valor de       diária de R${suite.ValorDiaria:F2} criada com sucesso");
+                Enter();
+            }
+            if(menu == 3)
+            {
+                Console.Clear();
+                foreach(Suite suite in suites){
+                    Console.WriteLine($"Tipo: {suite.TipoSuite} - Capacidade: {suite.Capacidade} - Valor diária: {suite.ValorDiaria}");
+                }
+                Enter();
+            }
+            if(menu == 4)
+            {
+                Console.Clear();
+                Console.WriteLine($"Você tem {listaHospedes.Count()} cadastrados e prontos para reserva");
+                Console.WriteLine("Em qual suite você deseja fazer a sua reserva?");
+                for(int i = 0; i < suites.Count; i++){
+                    Console.WriteLine($"{i+1} - {suites[i].TipoSuite} - Capacidade:{suites[i].Capacidade} - Valor diária{suites[i].ValorDiaria}");
+                }
+                int chave = GetValidInt();
+                Console.WriteLine("Quantos dias você deseja passar?");
+                int dias = GetValidInt();
+                Reserva reserva = new Reserva(listaHospedes, suites[chave-1], dias);
+                listaReservas.Add(reserva);
+                Console.WriteLine($"Reserva de {dias} realizada");
+                Enter();
+            }
+            if(menu == 5)
+            {
+                Console.Clear();
+                Console.WriteLine($"Você tem {listaReservas.Count()} reservas realizadas");
+                foreach(Reserva reserva in listaReservas)
+                {
+                    Console.WriteLine($"O valor da diária é: {reserva.CalculaValorDiaria()} ");
+                }
+                Enter();
             }
         }
     }
