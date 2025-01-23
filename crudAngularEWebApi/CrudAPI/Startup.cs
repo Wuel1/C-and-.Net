@@ -14,6 +14,7 @@ public class Startup
     {
         services.AddDbContext<ContextDB>(options => options.UseSqlServer(Configuration.GetConnectionString("ConectionDB2")));
         services.AddControllers();
+        services.AddCors();
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRUD API", Version = "v1" });
@@ -37,6 +38,7 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseRouting();
         app.UseAuthorization();
+        app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
         app.UseEndpoints(endpoints =>
         {
