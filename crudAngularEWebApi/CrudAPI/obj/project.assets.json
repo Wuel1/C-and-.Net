@@ -5176,11 +5176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
+      "projectUniqueName": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
       "projectName": "CrudAPI",
-      "projectPath": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
+      "projectPath": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
       "packagesPath": "C:\\Users\\wands\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wands\\Desktop\\Projetos\\C#\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\obj\\",
+      "outputPath": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wands\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,0 +1,40 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-6 border border-light rounded p-5 shadow">
+            <h6>{{tituloFormulario}}</h6>
+            <hr>
+
+            <form [formGroup]="formulario">
+
+                <div class="form-group">
+                    <label class="my-2"> Nome </label>
+                    <input type="text" class="form-control form-control-sm" formControlName="Name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="mb-2"> Sobrenome </label>
+                    <input type="text" class="form-control form-control-sm" formControlName="LastName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="mb-2"> Idade </label>
+                    <input type="text" class="form-control form-control-sm" formControlName="Age"/>
+                </div>
+
+                
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-sm btn-light">Limpar</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </form>            
+        </div>
+    </div>
+</div>

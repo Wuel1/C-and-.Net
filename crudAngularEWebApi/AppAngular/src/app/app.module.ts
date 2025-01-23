@@ -3,28 +3,32 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ServerModule } from '@angular/platform-server';
 
 import { PessoaService } from './pessoa.service';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalModule } from 'ngx-bootstrap/modal'
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PessoasComponent } from './components/pessoas/pessoas.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PessoasComponent
   ],
   imports: [
     BrowserModule,
+    ServerModule,
     AppRoutingModule,
     CommonModule,
-    HttpClient,
+    HttpClientModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    HttpClient,
+    HttpClientModule,
     PessoaService
   ],
   bootstrap: [AppComponent]
