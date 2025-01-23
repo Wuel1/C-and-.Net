@@ -12,7 +12,7 @@ public class Startup
     }
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddDbContext<ContextDB>(options => options.UseSqlServer(Configuration.GetConnectionString("ConectionDB")));
+        services.AddDbContext<ContextDB>(options => options.UseSqlServer(Configuration.GetConnectionString("ConectionDB2")));
         services.AddControllers();
         services.AddSwaggerGen(c =>
         {
