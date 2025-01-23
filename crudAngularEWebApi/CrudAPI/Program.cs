@@ -1,24 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Cria uma instância do Startup e passa a configuração
+var startup = new Startup(builder.Configuration);
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Configura os serviços usando o método ConfigureServices do Startup
+startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.UseSwaggerUI(options => options.SwaggerEndpoint("../openapi/v1.json", "CRUD API"));
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+// Configura o pipeline de middleware usando o método Configure do Startup
+startup.Configure(app, app.Environment);
 
 app.Run();
