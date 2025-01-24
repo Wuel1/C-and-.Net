@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Pessoa } from '../../Pessoa';
+import { PessoaService } from '../../pessoa.service';
 
 @Component({
   selector: 'app-pessoas',
@@ -13,17 +15,24 @@ export class PessoasComponent implements OnInit {
   formulario: any;
   tituloFormulario: any;
   
-  constructor() {}
+  constructor(private pessoaService: PessoaService) {}
 
   ngOnInit(): void {
 
     this.tituloFormulario = "Cadastre uma pessoa"
     this.formulario = new FormGroup({
-      Name: new FormGroup(null),
-      LasName: new FormGroup(null),
-      Age: new FormGroup(null)
-    })
-    
+      Name: new FormControl(null),
+      LastName: new FormControl(null),
+      Age: new FormControl(null)
+    })    
+  }
+
+  Enviar(): void{
+    const pessoa: Pessoa = this.formulario.value;
+
+    this.pessoaService.postPessoa(pessoa).subscribe(result => (
+      alert("Pessoa Cadastrada com sucesso no banco")
+    ));
   }
 
 }

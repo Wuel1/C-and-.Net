@@ -7,7 +7,8 @@ import { ServerModule } from '@angular/platform-server';
 
 import { PessoaService } from './pessoa.service';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, withFetch } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PessoasComponent } from './components/pessoas/pessoas.component'
@@ -22,13 +23,12 @@ import { PessoasComponent } from './components/pessoas/pessoas.component'
     ServerModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    HttpClientModule,
+    provideHttpClient(withFetch()),
     PessoaService
   ],
   bootstrap: [AppComponent]
