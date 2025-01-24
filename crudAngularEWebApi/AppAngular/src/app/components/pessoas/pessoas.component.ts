@@ -36,8 +36,9 @@ export class PessoasComponent implements OnInit {
   }
 
   ExibirFormularioTabela(): void{
-    this.visibilidadeTabela = false
-    this.visibilidadeFormulario = true
+
+    this.visibilidadeTabela = !this.visibilidadeTabela
+    this.visibilidadeFormulario = !this.visibilidadeFormulario
 
     this.tituloFormulario = "Cadastre uma pessoa"
     this.formulario = new FormGroup({
@@ -56,6 +57,10 @@ export class PessoasComponent implements OnInit {
       alert("Pessoa Cadastrada com sucesso no banco")
       this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
   });
+  }
+
+  Limpar(): void{
+    console.log("Limpar")
   }
 
   Voltar(): void{
