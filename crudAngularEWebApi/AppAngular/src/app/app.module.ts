@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ServerModule } from '@angular/platform-server';
 
 import { PessoaService } from './pessoa.service';
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 import { HttpClientModule, withFetch } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +22,6 @@ import { PessoasComponent } from './components/pessoas/pessoas.component'
     BrowserModule,
     ServerModule,
     AppRoutingModule,
-    CommonModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],

@@ -1,74 +1,72 @@
 <div class="container p-5">
-    <div class="border boder-light rounded p-5 shadow" *ngIf="visibilidadeTabela">
-        <Button type="button" class="btn btn-sm btn-secondary" (click)="ExibirFormularioTabela()">Cadastrar Pessoa</Button>
-        
-        <hr/>
-
-        <!-- ngif="listPessoas" deve vir aqui, mas não to conseguindo -->
-        <table class="table table-striped table-hover table-sm">
-            <tr class="thead-light">
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Idade</th>
-                <th></th>
-                <th></th>
-            </tr>
+    @if(visibilidadeTabela){
+        <div class="border boder-light rounded p-5 shadow">
+            <Button type="button" class="btn btn-sm btn-secondary" (click)="ExibirFormularioTabela()">Cadastrar Pessoa</Button>
             
-            <tr *ngFor="let pessoa of listPessoas">
-                <td>{{pessoa.name}}</td>
-                <td>{{pessoa.lastName}}</td>
-                <td>{{pessoa.age}}</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-outline-info"> Atualizar </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-outline-danger"> Excluir </button>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-</div>
-
-
-<div class="container p-5" *ngIf="visibilidadeFormulario">
-    <div class="row">
-        <!-- ngif="formulario" deve vir aqui, mas não to conseguindo -->
-        <div class="col-6 border border-light rounded p-5 shadow">
-            <h6>{{tituloFormulario}}</h6>
-            <hr>
-
-            <form [formGroup]="formulario" (ngSubmit)="Enviar()">
-
-                <div class="form-group">
-                    <label class="my-2"> Nome </label>
-                    <input type="text" class="form-control form-control-sm" formControlName="Name"/>
-                </div>
-
-                <div class="form-group">
-                    <label class="mb-2"> Sobrenome </label>
-                    <input type="text" class="form-control form-control-sm" formControlName="LastName"/>
-                </div>
-
-                <div class="form-group">
-                    <label class="mb-2"> Idade </label>
-                    <input type="text" class="form-control form-control-sm" formControlName="Age"/>
-                </div>
-
+            <hr/>
+    
+            <!-- ngif="listPessoas" deve vir aqui, mas não to conseguindo -->
+            <table class="table table-striped table-hover table-sm">
+                <tr class="thead-light">
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Idade</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 
-                <div class="container">
-                    <div class="row mt-3">
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-light">Limpar</button>
+                <tr *ngFor="let pessoa of listPessoas">
+                    <td>{{pessoa.name}}</td>
+                    <td>{{pessoa.lastName}}</td>
+                    <td>{{pessoa.age}}</td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline-info"> Atualizar </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline-danger"> Excluir </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    } @else if(visibilidadeFormulario){
+        <div class="row">
+            <!-- ngif="formulario" deve vir aqui, mas não to conseguindo -->
+            <div class="col-6 border border-light rounded p-5 shadow">
+                <h6>{{tituloFormulario}}</h6>
+                <hr>
+    
+                <form [formGroup]="formulario" (ngSubmit)="Enviar()">
+    
+                    <div class="form-group">
+                        <label class="my-2"> Nome </label>
+                        <input type="text" class="form-control form-control-sm" formControlName="Name"/>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="mb-2"> Sobrenome </label>
+                        <input type="text" class="form-control form-control-sm" formControlName="LastName"/>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="mb-2"> Idade </label>
+                        <input type="text" class="form-control form-control-sm" formControlName="Age"/>
+                    </div>
+    
+                    
+                    <div class="container">
+                        <div class="row mt-3">
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-sm btn-light">Limpar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-
-            </form>            
+                    
+    
+                </form>            
+            </div>
         </div>
-    </div>
+    }
 </div>
