@@ -23,9 +23,10 @@ export class PessoasComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.pessoaService.getAllPessoas().subscribe(result => (
-      this.listPessoas = result
-    ))
+    this.pessoaService.getAllPessoas().subscribe(result => {
+      this.listPessoas = result;
+      console.log(result)
+    })
 
     this.tituloFormulario = "Cadastre uma pessoa"
     this.formulario = new FormGroup({
@@ -57,6 +58,29 @@ export class PessoasComponent implements OnInit {
       alert("Pessoa Cadastrada com sucesso no banco")
       this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
   });
+  }
+
+  Atualizar(pessoa: Pessoa): void{
+    this.tituloFormulario = "Atualize o cadastro"
+    this.formulario = new FormGroup({
+      Name: new FormControl(pessoa.Age),
+      LastName: new FormControl(pessoa.LastName),
+      Age: new FormControl(pessoa.Age)
+    })
+
+    const newPessoa = this.formulario.value;
+    
+    this.pessoaService.putPessoa(newPessoa).subscribe(result => alert("Teste"))
+  }
+
+  Deletar(userid: number): void{
+    try {
+      this.pessoaService.deletePessoa(userid).subscribe(result => alert("Usuário excluido com sucesso"))    
+      this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
+      console.log("passou")
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   Limpar(): void{

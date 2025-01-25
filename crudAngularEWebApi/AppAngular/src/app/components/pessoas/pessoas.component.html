@@ -21,10 +21,10 @@
                             <td>{{pessoa.lastName}}</td>
                             <td>{{pessoa.age}}</td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-outline-info"> Atualizar </button>
+                                <button type="button" class="btn btn-sm btn-outline-info" (click)="Atualizar(pessoa)"> Atualizar </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger"> Excluir </button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" (click)="Deletar(pessoa.userID)"> Excluir </button>
                             </td>
                         </tr>
                     }                
