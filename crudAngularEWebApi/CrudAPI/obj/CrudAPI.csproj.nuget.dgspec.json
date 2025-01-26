@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj": {}
+    "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C sharp\\Projetos\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj": {
+    "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C sharp\\Projetos\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
+        "projectUniqueName": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C sharp\\Projetos\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
         "projectName": "CrudAPI",
-        "projectPath": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
+        "projectPath": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C sharp\\Projetos\\crudAngularEWebApi\\CrudAPI\\CrudAPI.csproj",
         "packagesPath": "C:\\Users\\wands\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wands\\Desktop\\Projetos\\C sharp\\C-and-.Net\\crudAngularEWebApi\\CrudAPI\\obj\\",
+        "outputPath": "C:\\Users\\wands\\OneDrive\\Área de Trabalho\\Projetos\\Dio.me\\C sharp\\Projetos\\crudAngularEWebApi\\CrudAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wands\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

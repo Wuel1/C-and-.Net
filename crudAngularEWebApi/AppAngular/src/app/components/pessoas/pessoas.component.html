@@ -6,9 +6,9 @@
             <hr/>
     
             @if(listPessoas){
-                <table class="table table-striped table-hover table-sm">
+                <table class="table table-hover">
                     <thead>
-                        <tr class="thead-light">
+                        <tr>
                             <th>Nome</th>
                             <th>Sobrenome</th>
                             <th>Idade</th>
@@ -65,9 +65,6 @@
                     <div class="row mt-3">
                         <div class="col-auto">
                             <button type="submit" class="btn btn-sm btn-outline-secondary">Salvar</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-sm btn-light" (click)="Limpar()">Limpar</button>
                         </div>
                         <div class="col-auto">
                             <button type="button" class="btn btn-sm btn-light" (click)="Voltar()">Voltar</button>

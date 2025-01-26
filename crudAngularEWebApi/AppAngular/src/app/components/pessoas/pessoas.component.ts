@@ -101,10 +101,6 @@ export class PessoasComponent implements OnInit {
     }
   }
 
-  Limpar(): void{
-    console.log("Limpar")
-  }
-
   Voltar(): void{
     this.AlternaTabelaForm();
   }
