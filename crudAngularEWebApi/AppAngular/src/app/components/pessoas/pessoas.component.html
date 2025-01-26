@@ -24,7 +24,7 @@
                                 <button type="button" class="btn btn-sm btn-outline-info" (click)="Atualizar(pessoa)"> Atualizar </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger" (click)="Deletar(pessoa.userID)"> Excluir </button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" (click)="ExibirModal(pessoa.userID, pessoa.name, modalConfirmaExclusao)"> Excluir </button>
                             </td>
                         </tr>
                     }                
@@ -79,3 +79,23 @@
     }
     </div>
 </div>
+
+<ng-template #modalConfirmaExclusao>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left"> Confirmação de Exclusão </h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+        <p>
+            Você tem certeza que deseja excluir {{nomePessoa}}
+        </p>      
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-light" (click)="modalRef?.hide()"> Não </button>    
+        <button type="button" class="btn btn-sm btn-outline-danger" (click)="Deletar(pessoaId)"> Sim </button>    
+    </div>
+  </ng-template>

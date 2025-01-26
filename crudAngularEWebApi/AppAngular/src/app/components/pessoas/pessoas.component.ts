@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Pessoa } from '../../Pessoa';
 import { PessoaService } from '../../pessoa.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-pessoas',
@@ -15,11 +16,15 @@ export class PessoasComponent implements OnInit {
   formulario: any;
   tituloFormulario: any;
   listPessoas: Pessoa[] | any
+  nomePessoa: string | undefined;
+  pessoaId!: number;
 
   visibilidadeTabela: boolean = true;
   visibilidadeFormulario: boolean = false;
+
+  modalRef: BsModalRef | undefined;
   
-  constructor(private pessoaService: PessoaService) {}
+  constructor(private pessoaService: PessoaService, private modalService: BsModalService) {}
 
   ngOnInit(): void {
 
@@ -75,9 +80,11 @@ export class PessoasComponent implements OnInit {
 
   Deletar(userid: number): void{
     try {
-      this.pessoaService.deletePessoa(userid).subscribe(result => alert("Usuário excluido com sucesso"))    
-      this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
-      console.log("passou")
+      this.pessoaService.deletePessoa(userid).subscribe(result => {
+        this.modalRef?.hide();
+        alert("Usuário excluido com sucesso")
+        this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
+      })    
     } catch (error) {
       console.log(error)
     }
@@ -90,6 +97,12 @@ export class PessoasComponent implements OnInit {
   Voltar(): void{
     this.visibilidadeTabela = true;
     this.visibilidadeFormulario = false;
+  }
+
+  ExibirModal(userId: number, name: string, modalConfirmaExclusao: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(modalConfirmaExclusao);
+    this.pessoaId = userId;
+    this.nomePessoa = name;
   }
 
 }
