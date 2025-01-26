@@ -1,3 +1,9 @@
+<div class="container-fluid p-2 bg-primary border-bottom shadow">
+    <div class="d-flex justify-content-center align-items-center">
+        <img src="../../assets/img/logo.png" style="max-height: 100px;">
+    </div>
+</div>
+
 <div class="container p-5">
     <div class="border border-light rounded p-5 shadow">
     @if(visibilidadeTabela){
@@ -24,10 +30,10 @@
                                 <td>{{pessoa.lastName}}</td>
                                 <td>{{pessoa.age}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-info" (click)="Atualizar(pessoa.userID)"> Atualizar </button>
+                                    <button type="button" class="btn btn-sm btn-outline-info shadow" (click)="Atualizar(pessoa.userID)"> Atualizar </button>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="ExibirModal(pessoa.userID, pessoa.name, modalConfirmaExclusao)"> Excluir </button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger shadow" (click)="ExibirModal(pessoa.userID, pessoa.name, modalConfirmaExclusao)"> Excluir </button>
                                 </td>
                             </tr>
                         </tbody>
