@@ -1,13 +1,14 @@
 export class Pessoa{
-    UserID: Number
-    Name: String
-    LastName: String
-    Age: Number
+    userID: number
+    name: String
+    lastName: String
+    age: Number
+    UserID: any
 
-    constructor(userId: Number, name: String, LastName: String, age: Number){
-        this.UserID = userId
-        this.Name = name
-        this.LastName = LastName
-        this.Age = age
+    constructor(userId: number, name: String, LastName: String, age: Number){
+        this.userID = userId
+        this.name = name
+        this.lastName = LastName
+        this.age = age
     }
 }

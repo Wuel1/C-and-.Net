@@ -32,13 +32,6 @@ export class PessoasComponent implements OnInit {
       this.listPessoas = result;
       console.log(result)
     })
-
-    // this.tituloFormulario = "Cadastre uma pessoa"
-    // this.formulario = new FormGroup({
-    //   Name: new FormControl(null),
-    //   LastName: new FormControl(null),
-    //   Age: new FormControl(null)
-    // })    
   }
 
   ExibirFormularioTabela(): void{
@@ -58,10 +51,17 @@ export class PessoasComponent implements OnInit {
 
     console.log("Enviado", pessoa)
 
-    if(this.pessoaId > 0){
+    const id = pessoa.UserID;
+
+    console.log("id", id)
+
+
+    if(id > 0){
+      console.log("Atualizar")
       this.pessoaService.putPessoa(pessoa).subscribe(result =>{
         alert("Pessoa atualizada com sucesso");
         this.AtualizarLista()
+        this.AlternaTabelaForm()
       })
     }else{
         this.pessoaService.postPessoa(pessoa).subscribe(result => {
@@ -72,15 +72,18 @@ export class PessoasComponent implements OnInit {
     }
   }
 
-  Atualizar(pessoa: Pessoa): void{
+  Atualizar(userid: number): void{
 
-    this.tituloFormulario = "Atualize o cadastro"
-    this.formulario = new FormGroup({
-      UserId: new FormControl(pessoa.UserID),
-      Name: new FormControl(pessoa.Age),
-      LastName: new FormControl(pessoa.LastName),
-      Age: new FormControl(pessoa.Age)
-    })
+    this.pessoaService.getPessoa(userid).subscribe((resultado) => {
+      console.log("resultado -", resultado.userID)
+      this.tituloFormulario = `Atualizar ${resultado.name} ${resultado.lastName}`;
+      this.formulario = new FormGroup({
+        UserID: new FormControl(resultado.userID),
+        Name: new FormControl(resultado.name),
+        LastName: new FormControl(resultado.lastName),
+        Age: new FormControl(resultado.age),
+      });
+    });
 
     this.AlternaTabelaForm(); 
   }
@@ -106,9 +109,14 @@ export class PessoasComponent implements OnInit {
   }
 
   ExibirModal(userId: number, name: string, modalConfirmaExclusao: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(modalConfirmaExclusao);
-    this.pessoaId = userId;
-    this.nomePessoa = name;
+    try{
+      console.log("Qual foi")
+      this.modalRef = this.modalService.show(modalConfirmaExclusao);
+      this.pessoaId = userId;
+      this.nomePessoa = name;
+    }catch(error){
+      console.log(error)
+    }
   }
 
   AtualizarLista(): void{
