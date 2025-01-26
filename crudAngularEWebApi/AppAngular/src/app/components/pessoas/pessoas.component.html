@@ -7,26 +7,30 @@
     
             @if(listPessoas){
                 <table class="table table-striped table-hover table-sm">
-                    <tr class="thead-light">
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                        <th>Idade</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-    
-                    @for (pessoa of listPessoas; track pessoa) {
-                        <tr>
-                            <td>{{pessoa.name}}</td>
-                            <td>{{pessoa.lastName}}</td>
-                            <td>{{pessoa.age}}</td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-outline-info" (click)="Atualizar(pessoa.userID)"> Atualizar </button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-outline-danger" (click)="ExibirModal(pessoa.userID, pessoa.name, modalConfirmaExclusao)"> Excluir </button>
-                            </td>
+                    <thead>
+                        <tr class="thead-light">
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Idade</th>
+                            <th></th>
+                            <th></th>
                         </tr>
+                    </thead>
+
+                    @for (pessoa of listPessoas; track pessoa) {
+                        <tbody>
+                            <tr>
+                                <td>{{pessoa.name}}</td>
+                                <td>{{pessoa.lastName}}</td>
+                                <td>{{pessoa.age}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-info" (click)="Atualizar(pessoa.userID)"> Atualizar </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="ExibirModal(pessoa.userID, pessoa.name, modalConfirmaExclusao)"> Excluir </button>
+                                </td>
+                            </tr>
+                        </tbody>
                     }                
                     
                 </table>

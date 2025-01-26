@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { PessoasComponent } from './components/pessoas/pessoas.component'
     BrowserModule,
     ServerModule,
     AppRoutingModule,
+    ButtonsModule.forRoot(),
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
