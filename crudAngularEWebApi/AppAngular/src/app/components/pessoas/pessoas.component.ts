@@ -33,49 +33,56 @@ export class PessoasComponent implements OnInit {
       console.log(result)
     })
 
-    this.tituloFormulario = "Cadastre uma pessoa"
-    this.formulario = new FormGroup({
-      Name: new FormControl(null),
-      LastName: new FormControl(null),
-      Age: new FormControl(null)
-    })    
+    // this.tituloFormulario = "Cadastre uma pessoa"
+    // this.formulario = new FormGroup({
+    //   Name: new FormControl(null),
+    //   LastName: new FormControl(null),
+    //   Age: new FormControl(null)
+    // })    
   }
 
   ExibirFormularioTabela(): void{
 
-    this.visibilidadeTabela = !this.visibilidadeTabela
-    this.visibilidadeFormulario = !this.visibilidadeFormulario
-
     this.tituloFormulario = "Cadastre uma pessoa"
     this.formulario = new FormGroup({
       Name: new FormControl(null),
       LastName: new FormControl(null),
       Age: new FormControl(null)
-    })    
+    })  
+
+    this.AlternaTabelaForm()  
   }
 
   Enviar(): void{
     const pessoa: Pessoa = this.formulario.value;
 
-    this.pessoaService.postPessoa(pessoa).subscribe(result => {
-      this.visibilidadeFormulario = !this.visibilidadeFormulario
-      this.visibilidadeTabela = !this.visibilidadeTabela
-      alert("Pessoa Cadastrada com sucesso no banco")
-      this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
-  });
+    console.log("Enviado", pessoa)
+
+    if(this.pessoaId > 0){
+      this.pessoaService.putPessoa(pessoa).subscribe(result =>{
+        alert("Pessoa atualizada com sucesso");
+        this.AtualizarLista()
+      })
+    }else{
+        this.pessoaService.postPessoa(pessoa).subscribe(result => {
+        alert("Pessoa Cadastrada com sucesso no banco")
+        this.AtualizarLista()
+        this.AlternaTabelaForm()
+    })
+    }
   }
 
   Atualizar(pessoa: Pessoa): void{
+
     this.tituloFormulario = "Atualize o cadastro"
     this.formulario = new FormGroup({
+      UserId: new FormControl(pessoa.UserID),
       Name: new FormControl(pessoa.Age),
       LastName: new FormControl(pessoa.LastName),
       Age: new FormControl(pessoa.Age)
     })
 
-    const newPessoa = this.formulario.value;
-    
-    this.pessoaService.putPessoa(newPessoa).subscribe(result => alert("Teste"))
+    this.AlternaTabelaForm(); 
   }
 
   Deletar(userid: number): void{
@@ -83,7 +90,7 @@ export class PessoasComponent implements OnInit {
       this.pessoaService.deletePessoa(userid).subscribe(result => {
         this.modalRef?.hide();
         alert("Usuário excluido com sucesso")
-        this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
+        this.AtualizarLista()
       })    
     } catch (error) {
       console.log(error)
@@ -95,14 +102,22 @@ export class PessoasComponent implements OnInit {
   }
 
   Voltar(): void{
-    this.visibilidadeTabela = true;
-    this.visibilidadeFormulario = false;
+    this.AlternaTabelaForm();
   }
 
   ExibirModal(userId: number, name: string, modalConfirmaExclusao: TemplateRef<any>) {
     this.modalRef = this.modalService.show(modalConfirmaExclusao);
     this.pessoaId = userId;
     this.nomePessoa = name;
+  }
+
+  AtualizarLista(): void{
+    this.pessoaService.getAllPessoas().subscribe(result => (this.listPessoas = result))
+  }
+
+  AlternaTabelaForm(): void{
+    this.visibilidadeTabela = !this.visibilidadeTabela
+    this.visibilidadeFormulario = !this.visibilidadeFormulario
   }
 
 }
