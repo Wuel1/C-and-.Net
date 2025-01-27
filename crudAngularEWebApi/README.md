@@ -100,7 +100,17 @@ A aplicação estará disponível em `http://localhost:4200`.
 
 ## Capturas de Tela
 
+# FrontEnd (Angular)
+![Angular](Assets/angular/crud%20fotos.jpg)
+![Angular](Assets/angular/crud%20fotos%201.jpg)
+![Angular](Assets/angular/crud%20fotos%202.jpg)
+![Angular](Assets/angular/crud%20fotos%203.jpg)
 
+# API (Swagger)
+![API](Assets/api/swagger.jpg)
+
+# Banco de Dados (SQLServer)
+![Banco de Dados](Assets/sqlServer/sqlServ.jpg)
 
 ---
 
